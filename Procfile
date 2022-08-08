@@ -1,0 +1,1 @@
+web: gunicorn "pokemon.py:create_app()"
