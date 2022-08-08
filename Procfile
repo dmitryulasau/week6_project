@@ -1,1 +1,1 @@
-web: gunicorn "pokemon:create_app()"
+web: gunicorn app:app
