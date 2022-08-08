@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    <h1>Sign In</h1>
+    <form class="center-login" action="{{url_for('login')}}" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="mb-1">
+            {{ form.email.label(class="form-label login") }}
+            {{ form.email(class="form-control") }}
+            {% for error in form.email.errors %}
+            <strong><span style="color: red;">{{ error }}</span></strong>
+            {% endfor %}
+            
+        </div>
+        <div class="mb-3">
+            {{ form.password.label(class="form-label login") }}
+            {{ form.password(class="form-control") }}
+            {% for error in form.email.errors %}
+            <strong><span style="color: red;">{{ error }}</span></strong>
+            {% endfor %}
+        </div>
+        
+        <div>{{ form.submit(class="login-btn btn btn-danger") }}</div>
+        <div class="new_user">Don't have an account? <a href="{{ url_for('register') }}">Click to Register!</a></div>
+    </form>
+
+    
+
+{% endblock %}
+

@@ -1,0 +1,11 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    <h1 style="text-align: left;">User: {{ user.email }}</h1>
+    <h1 style="text-align: left;">First Name: {{ user.first_name }}</h1>
+    <h1 style="text-align: left;">Last Name: {{ user.last_name }}</h1>
+    
+    
+    <div class=catch><button class="btn btn-danger" type="submit"><a class="nav-link" href="{{url_for('index')}}">BACK TO CATCH</a></button></div>
+
+{% endblock %}

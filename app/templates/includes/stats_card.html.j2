@@ -1,0 +1,56 @@
+<div class="collection" >
+<table class="table-borderless pokecard">
+    <colgroup span="2"></colgroup>
+    <thead>
+    
+    
+    
+        
+    
+        <tr>
+            
+            <th colspan="2" style="text-align: center;"> 
+                <img class="img-pokemon" src="{{pokemon_data.gif}}" width="30">
+            </th>
+        </tr>
+        
+
+      
+        <tr>
+            <th style="text-align: center;" scope="row">DEF</th>
+                <td>
+                    {{pokemon_data.defense}}
+                    <img class="stats-icon" src="https://res.cloudinary.com/dulasau/image/upload/v1659485587/security_ed7uvc.png">
+                </td>
+        </tr>
+
+        <tr>
+            <th style="text-align: center;" scope="row">ATT</th>
+                <td>
+                {{pokemon_data.attack}}
+                <img class="stats-icon" src="https://res.cloudinary.com/dulasau/image/upload/v1659486213/sword_e5cibf.png">
+                </td>
+        </tr>
+
+        <tr>
+            <th style="text-align: center;" scope="row">HP</th>
+                <td>
+                {{pokemon_data.hp}}
+                <img class="stats-icon" src="https://res.cloudinary.com/dulasau/image/upload/v1659583844/heart_obpb3l.png">
+                </td>
+        </tr>
+<tr>
+<th colspan="2" scope="colgroup" class="thname thbottom"> 
+        {{pokemon_data.name.upper()}}
+            </th>
+            </tr>
+
+            <tr>
+            
+            <th class="release" colspan="2" style="text-align: center;"> 
+                <a class="btn btn-danger rel-button" href="{{url_for('release', name=pokemon_data.name)}}">RELEASE</a>
+            </th>
+        </tr>
+    </thead>
+</table>
+

@@ -1,0 +1,35 @@
+{% extends 'base.html.j2' %}
+{% block title %}
+BATTLE FIELD
+{% endblock %}
+
+{% block content %}
+    <h1>BATTLE FIELD</h1>
+    <h1>WORK IN PROGRESS...</h1>
+    
+<div align="center">
+    {% for user in users %}
+        <div class="card mb-3" style="width: 300px;">
+            <div class="row g-0">
+                
+                <div class="col-md-12">
+                <div align="center" class="card-body">
+                    <h5 class="card-title">{{user.first_name}} {{user.last_name}} &nbsp;<img width="30px" src="https://res.cloudinary.com/dulasau/image/upload/v1659965362/battle_zphjrp.png"/></h5>
+                    
+
+                    <p class="card-text">
+                    {% for pokemon_data in pokemon %}
+    
+                    {% include "./includes/stats_card.html.j2"%}
+    
+                    {% endfor %}
+                    
+                    </p>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

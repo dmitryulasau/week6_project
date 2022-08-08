@@ -1,0 +1,22 @@
+{% extends "base.html.j2" %}
+
+{% block content %}
+    <h1>{{user.first_name.title()}}'s Pokemon Collection</h1>
+
+  <div class="catch "><button class="btn btn-warning catch-collection-button" type="submit"><a class="nav-link catchcollection" href="{{url_for('index')}}">BACK TO CATCH</a></button></div>
+
+{% for pokemon_data in pokemon %}
+    
+    {% include "./includes/stats_card.html.j2"%}
+    
+{% endfor %}
+
+
+
+
+{% endblock %}
+
+
+
+  
+

@@ -1,0 +1,10 @@
+pip uninstall flask
+pip install flask==2.1.3
+
+pip freeze > requirements.txt
+
+
+from app import db
+from app.models import User, Pokemon
+u = User(username='jack', email='jack@sparrow.com')
+p = Pokemon(name='Bulbasaur', master=u)
